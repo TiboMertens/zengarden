@@ -1,0 +1,132 @@
+/* Hide horizontal scrollbar for WebKit-based browsers */
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+  width: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Nandaka Western", sans-serif;
+  color: #e09740;
+}
+
+p {
+  font-family: "Barbaro", sans-serif;
+  font-size: 0.9em;
+  font-weight: 100;
+  color: white;
+}
+
+h3 {
+  font-size: 3em;
+}
+
+.page-wrapper::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* background-image: url('images/whitenoise.jpg'); */
+  opacity: 0.3;
+}
+
+.page-wrapper {
+  margin-top: -15px;
+  position: relative;
+  z-index: 1;
+}
+
+footer {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+}
+
+#zen-intro h2 {
+  display: block;
+  margin: auto;
+  width: 80%;
+  margin-top: 180px;
+  margin-bottom: 30px;
+}
+
+h2 abbr {
+  border: none;
+  text-decoration: none;
+}
+
+.intro {
+  background-color: #404145;
+  background-image: url(../images/zon.svg);
+  background-repeat: no-repeat;
+  background-size: 75px 75px;
+  background-position: calc(100% - 40px) 80px;
+}
+
+.intro header h1 {
+  font-size: 1.2em;
+  padding-top: 12px;
+  padding-left: 12px;
+}
+
+.intro header h2 {
+  display: inline-block;
+  font-size: 3em;
+  text-align: center;
+}
+
+.summary {
+  text-align: center;
+  padding-bottom: 160px;
+  background-image: url(../images/cactussen.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 42px;
+  background-position: center bottom;
+}
+
+.summary p {
+  margin: 12px 12px;
+  line-height: 120%;
+}
+
+.summary p a {
+  color: white;
+}
+
+.preamble {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.explanation h3::after {
+  content: "";
+  display: inline-block;
+  width: 70px; /* adjust the width of the image as needed */
+  height: 70px; /* adjust the height of the image as needed */
+  background-image: url(../images/requirementsHat.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50% 50%; /* move the visible portion of the image to the center of the element */
+  vertical-align: middle;
+  position: relative;
+  right: 35px;
+  bottom: 20px;
+}
