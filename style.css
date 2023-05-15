@@ -4,6 +4,12 @@
     url(gomarice_nandaka_western-webfont.woff) format("woff");
 }
 
+@font-face {
+  font-family: "Barbaro";
+  src: url(barbaro-webfont.woff2) format("woff2"),
+    url(barbaro-webfont.woff) format("woff");
+}
+
 /* Hide horizontal scrollbar for WebKit-based browsers */
 ::-webkit-scrollbar {
   height: 5px;
