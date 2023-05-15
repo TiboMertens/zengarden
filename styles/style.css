@@ -65,6 +65,7 @@ footer {
   width: 80%;
   margin-top: 180px;
   margin-bottom: 30px;
+  font-size: 3em;
 }
 
 h2 abbr {
@@ -88,7 +89,6 @@ h2 abbr {
 
 .intro header h2 {
   display: inline-block;
-  font-size: 3em;
   text-align: center;
 }
 
@@ -129,4 +129,30 @@ h2 abbr {
   position: relative;
   right: 35px;
   bottom: 20px;
+}
+
+@media only screen and (min-width: 558px) {
+  #zen-intro h2 {
+    width: 65%;
+  }
+}
+
+@media only screen and (min-width: 682px) {
+  .summary {
+    padding-bottom: 220px;
+  }
+}
+
+@media only screen and (min-width: 880px) {
+  .summary {
+    padding-bottom: 270px;
+    background-size: 90%;
+  }
+}
+
+@media only screen and (min-width: 880px) {
+  .summary {
+    padding-bottom: 310px;
+    background-size: 90%;
+  }
 }
