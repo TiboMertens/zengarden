@@ -281,6 +281,8 @@ h2 abbr {
   }
 
   .benefits p::after {
+    width: 100px;
+    height: 100px;
     right: 25%;
     top: 60px;
     animation: roll 8s linear infinite;
