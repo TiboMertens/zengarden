@@ -89,7 +89,7 @@ h2 abbr {
 
 .intro {
   background-color: #404145;
-  background-image: url(../images/zon.svg);
+  background-image: url(images/zon.svg);
   background-repeat: no-repeat;
   background-size: 75px 75px;
   background-position: calc(100% - 40px) 20px;
@@ -109,7 +109,7 @@ h2 abbr {
 .summary {
   text-align: center;
   padding-bottom: 160px;
-  background-image: url(../images/cactussen.svg);
+  background-image: url(images/cactussen.svg);
   background-size: contain;
   background-repeat: no-repeat;
   margin: 0 42px;
@@ -127,10 +127,6 @@ h2 abbr {
 .preamble {
   background-color: #915348;
   padding: 20px;
-  background-image: url(../images/gitaar.svg);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
 }
 
 .preamble p {
@@ -144,22 +140,40 @@ h2 abbr {
 .explanation {
   background-color: #915348;
   padding: 20px;
-  padding-top: 70px;
+  padding-top: 20px;
+}
+
+.explanation p {
+  padding-bottom: 40px;
 }
 
 .explanation h3::after {
   content: "";
   display: inline-block;
-  width: 70px; /* adjust the width of the image as needed */
-  height: 70px; /* adjust the height of the image as needed */
-  background-image: url(../images/requirementsHat.png);
+  width: 80px; /* adjust the width of the image as needed */
+  height: 80px; /* adjust the height of the image as needed */
+  background-image: url(images/requirementsHat.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: 50% 50%; /* move the visible portion of the image to the center of the element */
   vertical-align: middle;
   position: relative;
   right: 45px;
-  bottom: 10px;
+  bottom: 15px;
+}
+
+.extra1 {
+  background-color: transparent;
+  position: absolute;
+  background-image: none;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 360px;
+  height: 800px;
+  top: 800px;
+  right: 0;
+  z-index: 50;
 }
 
 @media only screen and (min-width: 558px) {
@@ -185,9 +199,24 @@ h2 abbr {
     background-size: 90px 90px;
     background-position: calc(100% - 40px) 20px;
   }
+
+  .explanation p {
+    max-width: 65%;
+  }
+
+  .extra1 {
+    background-image: url(images/gitaar.svg);
+  }
 }
 
 @media only screen and (min-width: 880px) {
+  h1 {
+    font-size: 3.5em;
+  }
+  h3 {
+    font-size: 2.35em;
+  }
+
   p {
     font-size: 1.2em;
   }
@@ -195,5 +224,17 @@ h2 abbr {
   .summary {
     padding-bottom: 290px;
     background-size: 85%;
+  }
+
+  .preamble, .explanation {
+    padding-left: 15%;
+  }
+
+  .explanation p {
+    max-width: 80%;
+  }
+
+  .extra1 {
+    top: 700px;
   }
 }
