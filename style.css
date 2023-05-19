@@ -50,6 +50,10 @@ h3 {
   font-size: 1.8em;
 }
 
+a {
+  color: white;
+}
+
 .page-wrapper::before {
   content: "";
   position: fixed;
@@ -120,10 +124,6 @@ h2 abbr {
   margin: 12px 12px;
 }
 
-.summary p a {
-  color: white;
-}
-
 .preamble {
   background-color: #915348;
   padding: 20px;
@@ -147,19 +147,30 @@ h2 abbr {
   padding-bottom: 40px;
 }
 
-.explanation h3::after {
+.explanation h3::after, .participation h3::after {
   content: "";
   display: inline-block;
-  width: 80px; /* adjust the width of the image as needed */
-  height: 80px; /* adjust the height of the image as needed */
+  width: 70px; /* adjust the width of the image as needed */
+  height: 70px; /* adjust the height of the image as needed */
   background-image: url(images/requirementsHat.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: 50% 50%; /* move the visible portion of the image to the center of the element */
   vertical-align: middle;
   position: relative;
-  right: 45px;
+  right: 40px;
   bottom: 15px;
+}
+
+.participation {
+  background-color: #404145;
+  padding: 20px;
+}
+
+.benefits {
+  background-color: #404145;
+  padding: 20px;
+  padding-bottom: 30px;
 }
 
 .extra1 {
@@ -176,6 +187,40 @@ h2 abbr {
   z-index: 50;
 }
 
+.benefits p::after {
+  content: "";
+  background-image: url(images/tumbleweed.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  top: 55px;
+  right: 20px;
+  z-index: 50;
+  display: block; /* Ensure the pseudo-element takes up space */
+  animation: roll 4s linear infinite;
+}
+
+@keyframes roll {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  25% {
+    transform: translateX(25vw) translateY(-30px) rotate(60deg);
+  }
+  50% {
+    transform: translateX(50vw) translateY(0) rotate(120deg);
+  }
+  75% {
+    transform: translateX(75vw) translateY(-30px) rotate(180deg);
+  }
+  100% {
+    transform: translateX(100vw) rotate(240deg);
+  }
+}
+
 @media only screen and (min-width: 558px) {
   p {
     font-size: 1em;
@@ -187,10 +232,6 @@ h2 abbr {
 }
 
 @media only screen and (min-width: 682px) {
-  p {
-    font-size: 1.1em;
-  }
-
   .summary {
     padding-bottom: 220px;
   }
@@ -207,6 +248,10 @@ h2 abbr {
   .extra1 {
     background-image: url(images/gitaar.svg);
   }
+
+  .benefits p::after {
+    animation: roll 6s linear infinite;
+  }
 }
 
 @media only screen and (min-width: 880px) {
@@ -219,6 +264,7 @@ h2 abbr {
 
   p {
     font-size: 1.2em;
+    max-width: 80%;
   }
 
   .summary {
@@ -226,15 +272,17 @@ h2 abbr {
     background-size: 85%;
   }
 
-  .preamble, .explanation {
+  .preamble, .explanation, .participation, .benefits {
     padding-left: 15%;
   }
 
-  .explanation p {
-    max-width: 80%;
+  .extra1 {
+    top: 725px;
   }
 
-  .extra1 {
-    top: 700px;
+  .benefits p::after {
+    right: 25%;
+    top: 60px;
+    animation: roll 8s linear infinite;
   }
 }
