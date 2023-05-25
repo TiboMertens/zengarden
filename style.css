@@ -41,7 +41,8 @@ h3 {
   color: #e09740;
 }
 
-p, li {
+p,
+li {
   font-family: "Barbaro", sans-serif;
   font-size: 0.8em;
   font-weight: 100;
@@ -80,7 +81,7 @@ abbr {
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url('images/noise.svg');
+  background-image: url("images/noise.svg");
   opacity: 0.6;
   filter: contrast(500%), saturate(200%);
   mix-blend-mode: overlay; /* Use mix-blend-mode to blend the noise with the content */
@@ -275,7 +276,8 @@ footer a {
 }
 
 @media only screen and (min-width: 558px) {
-  p, li {
+  p,
+  li {
     font-size: 1em;
   }
 
@@ -298,10 +300,6 @@ footer a {
     max-width: 65%;
   }
 
-  .extra1 {
-    background-image: url(images/gitaar.svg);
-  }
-
   .benefits p::after {
     animation: roll 6s linear infinite;
   }
@@ -315,7 +313,8 @@ footer a {
     font-size: 2.35em;
   }
 
-  p, li {
+  p,
+  li {
     font-size: 1.1em;
   }
 
@@ -330,7 +329,12 @@ footer a {
   .summary {
     padding-left: 15%;
     padding-bottom: 290px;
-    background-size: 85%;
+    background-size: 80%;
+  }
+
+  .extra1 {
+    background-image: url(images/gitaar.svg);
+    top: 750px;
   }
 
   .preamble,
@@ -341,10 +345,6 @@ footer a {
     padding-left: 15%;
   }
 
-  .extra1 {
-    top: 725px;
-  }
-
   .benefits p::after {
     width: 100px;
     height: 100px;
@@ -353,3 +353,25 @@ footer a {
     animation: roll 8s linear infinite;
   }
 }
+
+@media only screen and (min-width: 1000px) {
+  .extra1 {
+    top: 700px;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .extra1 {
+    width: 300px;
+    height: 750px;
+    top: 740px;
+  }
+}
+
+@media only screen and (min-width: 1750px) {
+  .summary {
+    background-size: 60%;
+  }
+}
+
+
