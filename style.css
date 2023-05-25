@@ -10,7 +10,6 @@
     url(barbaro-webfont.woff) format("woff");
 }
 
-/* Hide horizontal scrollbar for WebKit-based browsers */
 ::-webkit-scrollbar {
   height: 5px;
   width: 5px;
@@ -30,6 +29,11 @@
   background-color: #aaa;
 }
 
+body {
+  position: relative;
+  background-color: #000;
+}
+
 h1,
 h2,
 h3 {
@@ -37,7 +41,7 @@ h3 {
   color: #e09740;
 }
 
-p {
+p, li {
   font-family: "Barbaro", sans-serif;
   font-size: 0.8em;
   font-weight: 100;
@@ -52,17 +56,15 @@ h3 {
 
 a {
   color: white;
+  text-decoration: none;
 }
 
-.page-wrapper::before {
-  content: "";
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  /* background-image: url('images/whitenoise.jpg'); */
-  opacity: 0.3;
+a:hover {
+  color: #e09740;
+}
+
+abbr {
+  text-decoration: none !important;
 }
 
 .page-wrapper {
@@ -71,11 +73,6 @@ a {
   z-index: 1;
 }
 
-footer {
-  position: absolute;
-  bottom: -50px;
-  width: 100%;
-}
 
 #zen-intro h2 {
   display: block;
@@ -121,6 +118,7 @@ h2 abbr {
 }
 
 .summary p {
+  text-align: center;
   margin: 12px 12px;
 }
 
@@ -147,15 +145,16 @@ h2 abbr {
   padding-bottom: 40px;
 }
 
-.explanation h3::after, .participation h3::after {
+.explanation h3::after,
+.participation h3::after {
   content: "";
   display: inline-block;
-  width: 70px; /* adjust the width of the image as needed */
-  height: 70px; /* adjust the height of the image as needed */
+  width: 70px;
+  height: 70px;
   background-image: url(images/requirementsHat.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: 50% 50%; /* move the visible portion of the image to the center of the element */
+  background-position: 50% 50%;
   vertical-align: middle;
   position: relative;
   right: 40px;
@@ -199,7 +198,7 @@ h2 abbr {
   top: 55px;
   right: 20px;
   z-index: 50;
-  display: block; /* Ensure the pseudo-element takes up space */
+  display: block;
   animation: roll 4s linear infinite;
 }
 
@@ -221,8 +220,49 @@ h2 abbr {
   }
 }
 
+.requirements {
+  background-color: #915348;
+  padding: 20px;
+}
+
+.sidebar {
+  background-color: #915348;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  color: white;
+}
+
+footer {
+  background-color: #915348;
+  font-family: "Nandaka western";
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 300;
+}
+
+footer a {
+  text-decoration: none;
+}
+
 @media only screen and (min-width: 558px) {
-  p {
+  p, li {
     font-size: 1em;
   }
 
@@ -262,17 +302,29 @@ h2 abbr {
     font-size: 2.35em;
   }
 
+  p, li {
+    font-size: 1.1em;
+  }
+
   p {
-    font-size: 1.2em;
     max-width: 80%;
   }
 
+  footer a {
+    font-size: 1.2em;
+  }
+
   .summary {
+    padding-left: 15%;
     padding-bottom: 290px;
     background-size: 85%;
   }
 
-  .preamble, .explanation, .participation, .benefits {
+  .preamble,
+  .explanation,
+  .participation,
+  .benefits,
+  .requirements {
     padding-left: 15%;
   }
 
