@@ -73,6 +73,19 @@ abbr {
   z-index: 1;
 }
 
+.page-wrapper::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/noise.svg');
+  opacity: 0.6;
+  filter: contrast(500%), saturate(200%);
+  mix-blend-mode: overlay; /* Use mix-blend-mode to blend the noise with the content */
+  pointer-events: none;
+}
 
 #zen-intro h2 {
   display: block;
@@ -89,7 +102,7 @@ h2 abbr {
 }
 
 .intro {
-  background-color: #404145;
+  background-color: #32353b;
   background-image: url(images/zon.svg);
   background-repeat: no-repeat;
   background-size: 75px 75px;
@@ -123,7 +136,7 @@ h2 abbr {
 }
 
 .preamble {
-  background-color: #915348;
+  background-color: #744239;
   padding: 20px;
 }
 
@@ -136,7 +149,7 @@ h2 abbr {
 }
 
 .explanation {
-  background-color: #915348;
+  background-color: #744239;
   padding: 20px;
   padding-top: 20px;
 }
@@ -151,7 +164,7 @@ h2 abbr {
   display: inline-block;
   width: 70px;
   height: 70px;
-  background-image: url(images/requirementsHat.png);
+  background-image: url(images/hatGrain.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: 50% 50%;
@@ -162,12 +175,12 @@ h2 abbr {
 }
 
 .participation {
-  background-color: #404145;
+  background-color: #32353b;
   padding: 20px;
 }
 
 .benefits {
-  background-color: #404145;
+  background-color: #32353b;
   padding: 20px;
   padding-bottom: 30px;
 }
@@ -188,7 +201,7 @@ h2 abbr {
 
 .benefits p::after {
   content: "";
-  background-image: url(images/tumbleweed.svg);
+  background-image: url(images/tumbleweedGrain.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -221,12 +234,12 @@ h2 abbr {
 }
 
 .requirements {
-  background-color: #915348;
+  background-color: #744239;
   padding: 20px;
 }
 
 .sidebar {
-  background-color: #915348;
+  background-color: #744239;
   padding: 20px;
   display: grid;
   place-items: center;
@@ -245,7 +258,7 @@ h2 abbr {
 }
 
 footer {
-  background-color: #915348;
+  background-color: #744239;
   font-family: "Nandaka western";
   position: absolute;
   bottom: -50px;
